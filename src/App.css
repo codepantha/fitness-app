@@ -1,0 +1,30 @@
+body {
+  font-family: 'Josefin Sans';
+  background-color: #FFFAFB;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.hero-banner-img {
+  position: absolute;
+  right: 40px;
+  top: 0px;
+  width: 700px;
+  height: 900px;
+  margin-top: -330px;
+}
+
+@media screen and (max-width:968px) {
+  .hero-banner-img {
+    display: none;
+  }
+}
