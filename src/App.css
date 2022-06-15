@@ -23,6 +23,11 @@ body {
   margin-top: -330px;
 }
 
+.bodyPart-card:hover {
+  transform: scale(1.05, 1.05);
+  transition: 0.3s all ease-in-out;
+}
+
 @media screen and (max-width:968px) {
   .hero-banner-img {
     display: none;
