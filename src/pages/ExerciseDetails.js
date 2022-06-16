@@ -1,9 +1,18 @@
-import React from 'react'
+import { Box } from '@mui/material';
+import React from 'react';
+
+import Details from '../components/Details';
+import ExerciseVideos from '../components/ExerciseVideos';
+import SimilarExercises from '../components/SimilarExercises';
 
 const ExerciseDetails = () => {
   return (
-    <div>ExerciseDetails</div>
-  )
-}
+    <Box>
+      <Details />
+      <ExerciseVideos />
+      <SimilarExercises />
+    </Box>
+  );
+};
 
-export default ExerciseDetails
+export default ExerciseDetails;
