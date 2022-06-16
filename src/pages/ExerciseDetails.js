@@ -10,6 +10,8 @@ import fetchData, { options, videoOptions } from '../utils/fetchData';
 const ExerciseDetails = () => {
   const [exerciseDetail, setExerciseDetail] = useState({});
   const [exerciseVideos, setExerciseVideos] = useState([]);
+  const [targetMuscleExercises, setTargetMuscleExercises] = useState([]);
+  const [equipmentExercises, setEquipmentExercises] = useState([]);
   const { id } = useParams()
 
   useEffect(() => {
@@ -20,6 +22,12 @@ const ExerciseDetails = () => {
       const exerciseDetailData = await fetchData(`${exerciseDBUrl}/exercises/exercise/${id}`, options);
       setExerciseDetail(exerciseDetailData);
 
+      const targetMuscleExercisesData = await fetchData(`${exerciseDBUrl}/exercises/target/${exerciseDetailData.target}`, options);
+      setTargetMuscleExercises(targetMuscleExercisesData);
+
+      const equipmentExercisesData = await fetchData(`${exerciseDBUrl}/exercises/equipment/${exerciseDetailData.equipment}`, options);
+      setEquipmentExercises(equipmentExercisesData);
+
       const exerciseVideosData = await fetchData(`${youtubeSearchUrl}/search?query=${exerciseDetailData.name}`, videoOptions);
       setExerciseVideos(exerciseVideosData.contents);
     }
@@ -27,10 +35,10 @@ const ExerciseDetails = () => {
   }, [id])
 
   return (
-    <Box>
+    <Box sx={{ mt: { lg: '96px', xs: '60px' } }}>
       <Details exerciseDetail={exerciseDetail} />
       <ExerciseVideos exerciseVideos={exerciseVideos} name={exerciseDetail.name} />
-      <SimilarExercises />
+      <SimilarExercises targetMuscleExercises={targetMuscleExercises} equipmentExercises={equipmentExercises} />
     </Box>
   );
 };
