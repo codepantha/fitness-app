@@ -68,8 +68,38 @@ body {
   transition: 0.3s all ease-in-out;
 }
 
-@media screen and (max-width:968px) {
+.detail-image {
+  width: 729px;
+  height: 742px;
+}
+
+.exercise-video {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 27%;
+  height: 381px;
+  text-decoration: none;
+}
+
+@media screen and (max-width:1200px) {
   .hero-banner-img {
     display: none;
+  }
+
+  .detail-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .exercise-video {
+    width: 320px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .exercise-card {
+    width: 280px;
   }
 }

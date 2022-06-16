@@ -10,10 +10,10 @@ const ExerciseCard = ({ exercise }) => {
       </Link>
 
       <Stack direction="row">
-        <Button sx={{ ml:'21px', color: '#fff', borderRadius:'20px', background:'#ffa9a9', fontSize: '14px', textTransform: 'capitalize' }}>
+        <Button title="body part" sx={{ ml:'21px', color: '#fff', borderRadius:'20px', background:'#ffa9a9', fontSize: '14px', textTransform: 'capitalize' }}>
           {exercise.bodyPart}
         </Button>
-        <Button sx={{ ml:'21px', color: '#fff', borderRadius:'20px', background:'#fcc757', fontSize: '14px', textTransform: 'capitalize' }}>
+        <Button title="target muscle" sx={{ ml:'21px', color: '#fff', borderRadius:'20px', background:'#fcc757', fontSize: '14px', textTransform: 'capitalize' }}>
           {exercise.target}
         </Button>
       </Stack>
