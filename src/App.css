@@ -24,7 +24,29 @@ body {
 }
 
 .bodyPart-card:hover {
-  transform: scale(1.05, 1.05);
+  transform: scale(1.1, 1.01);
+  transition: 0.3s all ease-in-out;
+}
+
+.left-arrow {
+  cursor: pointer;
+}
+
+.right-arrow {
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FF2625;
+  font-size: 25px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  transform: scale(1, 1);
   transition: 0.3s all ease-in-out;
 }
 
