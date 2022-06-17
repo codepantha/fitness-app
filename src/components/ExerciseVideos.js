@@ -1,5 +1,6 @@
 import { Box, Stack, Typography } from '@mui/material';
 import React from 'react';
+import YouTube from 'react-youtube';
 
 const ExerciseVideos = ({ exerciseVideos, name }) => {
 
@@ -21,23 +22,10 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
             sx={{ flexDirection: { lg: 'row' }, gap: { lg: '110px', xs: '0' } }}
           >
             {exerciseVideos?.slice(0, 6).map((item, index) => (
-              <a 
-                key={index}
+              <YouTube
                 className="exercise-video"
-                href={`https://www.youtube.com/watch?v=${item.video.videoId}`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={item.video.thumbnails[0].url} alt={item.video.title} style={{ width: '100%' }} />
-                <Box>
-                  <Typography variant="h5" color="#000">
-                    {item.video.title}
-                  </Typography>
-                  <Typography variant="h6" color="#000">
-                    {item.video.channelName}
-                  </Typography>
-                </Box>
-              </a>
+                videoId={item.video.videoId}
+              />
             ))}
           </Stack>
         </Box>
