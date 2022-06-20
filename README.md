@@ -2,6 +2,8 @@
 
 A fitness app that shows you exercises to build core muscles with gifs and video guides. Built with React, MUI, and RapidAPI
 
+[Fitness app live demo](https://fitfiddle.netlify.app)
+
 Home | Exercise
 :------:|:-----:
 ![image](https://user-images.githubusercontent.com/46839548/174563688-e793777c-cd61-460a-aa7c-04ebf7cda46e.png) | ![image](https://user-images.githubusercontent.com/46839548/174564117-45434950-9ed7-43cf-b7bc-89686a9df09a.png)
